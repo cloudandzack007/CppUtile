@@ -14,7 +14,7 @@
 #include <string>
 using namespace std;
 
-//#define SINGLE_LOG
+#define SINGLE_LOG
 
 #ifdef SINGLE_LOG
 //单实例API

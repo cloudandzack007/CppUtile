@@ -72,7 +72,8 @@ void CLog::rotate_log()
     FCLOSE(m_fp);
     rename_file();
 
-    m_fp = fopen(m_log_filename.c_str(), "wb");
+    //m_fp = fopen(m_log_filename.c_str(), "wb");
+    m_fp = _fsopen(m_log_filename.c_str(), "wb", _SH_DENYNO);
     if (NULL == m_fp)
     {
         fprintf(stderr, "Open log file(%s) fail!\n", m_log_filename.c_str());
