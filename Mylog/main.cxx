@@ -33,7 +33,7 @@ int main()
 
     for(int i = 0; i < 1000000; i++)
     {
-        LOG_TRACE("****%d****", i);
+        LOG_TRACE("****%.2f****", 0.23f);
         LOG_INFO("test INFO");
         LOG_WARNING("test WARNING");
         LOG_ERROR("test ERROR");
