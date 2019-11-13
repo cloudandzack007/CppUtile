@@ -118,7 +118,7 @@ public:
     void set_log_size(uint size) {m_log_size = size;}
 
     //设置日志文件占用磁盘空间大小, 单位byte
-    void set_log_space(uint64 size) {m_max_log_space = size;}
+    void set_log_space(uint64 size) {m_max_log_space = size;if(0 == m_max_log_space)set_clean_status(false);}
 
     //设置日志级别
     void set_log_level(uint level) {m_log_level = (level > LOG_LEVEL_MAX) ? LOG_LEVEL_MAX : level;}
